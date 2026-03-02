@@ -5,47 +5,40 @@
 <title>برنامج البحث والرياضة</title>
 
 <style>
-bod y{
-    font-family: Arial;
-    text-align: center;
-    background:#f0f0f0;
+body{
+  font-family: Arial;
+  text-align: center;
+  background: #f0f0f0;
 }
+
 .box{
-    background:white;
-    padding:20px;
-    margin:40px auto;
-    width:300px;
-    border-radius:10px;
-    box-shadow:0 0 10px rgba(0,0,0,0.1);
+  background: white;
+  padding: 20px;
+  margin: 40px auto;
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 button{
-    padding:10px 15px;
-    margin:5px;
-    border:none;
-    border-radius:5px;
-    background:#2b7cff;
-    color:white;
-    font-size:16px;
-}
-input{
-    padding:10px;
-    width:80%;
-    margin:10px 0;
+  padding: 10px;
+  margin: 5px;
+  width: 80%;
 }
 </style>
 
 </head>
+
 <body>
 
 <div class="box">
 <h2>🔎 البحث</h2>
-<input id="searchText" placeholder="اكتب ما تريد البحث عنه">
-<br>
+<input id="searchText" placeholder="اكتب كلمة البحث">
+<br><br>
 <button onclick="search()">بحث</button>
 </div>
 
 <div class="box">
-<h2>🏃‍♂️ الرياضة</h2>
+<h2>🏃 الرياضة</h2>
 <button onclick="showSport('كرة القدم')">كرة القدم</button>
 <button onclick="showSport('السباحة')">السباحة</button>
 <button onclick="showSport('الجري')">الجري</button>
@@ -54,12 +47,12 @@ input{
 
 <script>
 function search(){
-    let text = document.getElementById("searchText").value;
-    window.open("https://www.google.com/search?q=" + text);
+  let text = document.getElementById("searchText").value;
+  window.open("https://www.google.com/search?q=" + text);
 }
 
 function showSport(name){
-    document.getElementById("result").innerText = "اخترت: " + name;
+  document.getElementById("result").innerText = "اخترت: " + name;
 }
 </script>
 
